@@ -62,34 +62,34 @@ describe("Thermostat", function () {
     });
   });
 
-  it('can reset temperature to 20 degrees', function(){
+  it("can reset temperature to 20 degrees", function () {
     thermostat.up();
     thermostat.resetTemperature();
     expect(thermostat.getCurrentTemperature()).toEqual(20);
-  })
+  });
 
-  describe('when temperature is less than 18 degrees', function() {
-    it('energy usage is low', function() {
+  describe("when temperature is less than 18 degrees", function () {
+    it("energy usage is low", function () {
       for (let i = 0; i < 3; i++) {
         thermostat.down();
       }
-      expect(thermostat.energyUsage()).toEqual('low-usage')
-    })
-  })
+      expect(thermostat.energyUsage()).toEqual("low-usage");
+    });
+  });
 
-  describe('when temperature is between 18 & 25 degrees', function() {
-    it('energy usage is medium', function() {
-       expect(thermostat.energyUsage()).toEqual('medium-usage')
-    })
-  })
+  describe("when temperature is between 18 & 25 degrees", function () {
+    it("energy usage is medium", function () {
+      expect(thermostat.energyUsage()).toEqual("medium-usage");
+    });
+  });
 
-  describe('when temperature is greater than 25 degrees', function() {
-    it('energy usage is high', function() {
+  describe("when temperature is greater than 25 degrees", function () {
+    it("energy usage is high", function () {
       thermostat.powerSavingModeOff();
       for (let i = 0; i < 6; i++) {
         thermostat.up();
       }
-      expect(thermostat.energyUsage()).toEqual('high-usage')
-    })
-  })
+      expect(thermostat.energyUsage()).toEqual("high-usage");
+    });
+  });
 });

@@ -55,12 +55,14 @@ class Thermostat {
 
   energyUsage() {
     if (this.temperature < this.LOW_TEMP_LIMIT) {
-      return 'low-usage';
-    } else if (this.temperature >= this.LOW_TEMP_LIMIT && this.temperature <= this.MEDIUM_TEMP_LIMIT) {
-      return 'medium-usage';
+      return "low-usage";
+    } else if (
+      this.temperature >= this.LOW_TEMP_LIMIT &&
+      this.temperature <= this.MEDIUM_TEMP_LIMIT
+    ) {
+      return "medium-usage";
     } else {
-      return 'high-usage';
+      return "high-usage";
     }
-
   }
 }
