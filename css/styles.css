@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 .low-usage {
   color: green;
 }
@@ -8,4 +18,18 @@
 
 .high-usage {
   color: red;
+}
+
+body {
+  display: flex;
+}
+
+.white {
+  flex-grow: 1;
+  background: white;
+}
+.black {
+  flex-grow: 1;
+  background: black;
+  height: 100vh;
 }
