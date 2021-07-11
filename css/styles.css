@@ -33,3 +33,34 @@ body {
   background: black;
   height: 100vh;
 }
+
+#temperature {
+  font-size: 25rem;
+  margin-left: 73%;
+  margin-top: 17%;
+}
+
+section {
+  background: rgb(204, 96, 57);
+  font-size: 1.9rem;
+  display: flex;
+  margin-right: 30%;
+  align-items: center;
+}
+section h1 {
+  color: white;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70%;
+  font-size: 2rem;
+}
+.controls button {
+  background: white;
+  border: none;
+  font-size: 2rem;
+}
